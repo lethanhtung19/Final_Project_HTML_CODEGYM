@@ -1,0 +1,48 @@
+/** @format */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+}
+
+$title-font: "Dancing Script", cursive;
+$font-weight: (
+  "light": 350,
+  "regular": 500,
+  "bold": 700,
+);
+$color-text: #fff;
+$color-sub_title: #ffec99;
+$background-color-section: #282828;
+
+%lable-logo {
+  font-family: $title-font;
+  font-size: $title-font;
+  font-style: italic;
+  color: #ffe066;
+  font-weight: map-get($font-weight, bold);
+}
+
+@mixin column-flexbox($padding-value, $gap-value) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: $padding-value;
+  gap: $gap-value;
+}
+
+@mixin align-center-elements($padding-value, $gap-value) {
+  display: flex;
+  align-items: center;
+  padding: $padding-value;
+  gap: $gap-value;
+}
