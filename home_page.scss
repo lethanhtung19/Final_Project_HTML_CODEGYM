@@ -12,6 +12,96 @@
  * */
 @import "gennerals-attribute";
 
-.logo {
+// HEADER
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url(/images/background-img/tomsriver-restaurants2.jpg);
+  background-size: 101%;
+  height: 100vh;
+  background-position: 0 -15.5rem;
+  padding: 2rem 5rem;
+}
+
+// NAV-BAR ABSOLUTE
+.logo-navbar {
+  justify-content: space-between;
+  @include align-center_flexrow(0, 0);
+  padding: 0 3rem;
+  margin-bottom: 12rem;
+
+  ul {
+    @include align-center_flexrow(0, 2.4rem);
+
+    li {
+      list-style: none;
+
+      a {
+        color: $color-text;
+        text-decoration: none;
+        display: inline-block;
+        margin-bottom: 3px;
+        font-size: 2rem;
+      }
+      hr {
+        width: 0;
+        height: 2px;
+        background-color: $color-impress;
+        border: none;
+        opacity: 0;
+      }
+      &:hover {
+        cursor: pointer;
+        a {
+          color: $color-impress;
+          transition: all 0.5s ease-in-out;
+        }
+        hr {
+          width: 100%;
+          transition: all 0.5s ease-in-out;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}
+
+.logo-navbar__logo {
+  @extend%lable-logo;
+  @include column-flexbox(0, 0);
+  // font-size: $sub-title-font-size;
+}
+
+// BANNER PART
+
+.intro-box {
+  text-align: center;
+  // display: inline-block;
+  @include column-flexbox(0, 0);
+  gap: 1.2rem;
+  width: fit-content;
+
+  p {
+    color: $color-text;
+  }
+}
+
+.intro-text--head-title {
+  color: $color-sub-title;
+  font-size: 6.2rem;
+}
+.restaurant-name-banner {
   @extend %lable-logo;
+  font-size: 7.2rem;
+}
+
+.btn-box {
+  @include align-center_flexrow(0, 1.2rem);
+  .btn {
+    @extend %button;
+    color: $color-impress;
+    &:hover {
+      background-color: $color-sub-title;
+    }
+  }
 }

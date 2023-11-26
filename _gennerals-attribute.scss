@@ -19,15 +19,17 @@ $font-weight: (
   "regular": 500,
   "bold": 700,
 );
+$sub-title-font-size: 2.4rem;
 $color-text: #fff;
-$color-sub_title: #ffec99;
+$color-sub-title: #ffec99;
+$color-impress: #ffe066;
 $background-color-section: #282828;
 
 %lable-logo {
   font-family: $title-font;
-  font-size: $title-font;
+  // font-size: 2.4rem;
   font-style: italic;
-  color: #ffe066;
+  color: $color-impress;
   font-weight: map-get($font-weight, bold);
 }
 
@@ -40,9 +42,17 @@ $background-color-section: #282828;
   gap: $gap-value;
 }
 
-@mixin align-center-elements($padding-value, $gap-value) {
+@mixin align-center_flexrow($padding-value, $gap-value) {
   display: flex;
   align-items: center;
   padding: $padding-value;
   gap: $gap-value;
+}
+
+%button {
+  text-decoration: none;
+  padding: 5px;
+  border: 2px solid $color-impress;
+  border-radius: 7px;
+  display: inline-block;
 }

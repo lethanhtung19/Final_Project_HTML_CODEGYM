@@ -11,8 +11,8 @@
     rel="stylesheet">
   <!--  -->
 
-  <link rel="stylesheet" href="home_page-from-scss.css">
-  <!-- <link rel="stylesheet" href="home-page.css"> -->
+  <link rel="stylesheet" href="home_page.css">
+
 </head>
 
 
@@ -20,30 +20,45 @@
   <header>
 
     <div class="logo-navbar">
-      <div class="logo">
-        <h1 class="name-restaurant">Celler de Can Roca</h1>
+      <div class="logo-navbar__logo">
+        <h1 class="logo-navbar__name-restaurant">Celler de Can Roca</h1>
         <p>- Enhance Cuisine -</p>
       </div>
       <div class="nav-bar">
         <nav>
-          <a href="home-page.html">Home</a>
-          <a href="">Menu</a>
-          <a href="">Carrer</a>
-          <a href="">Booking</a>
+          <ul>
+            <li>
+              <a href="home-page.html">Home</a>
+              <hr>
+            </li>
+            <li>
+              <a href="home-page.html">Menu</a>
+              <hr>
+            </li>
+            <li>
+              <a href="#">Carrer</a>
+              <hr>
+            </li>
+            <li>
+              <a href="#">Booking</a>
+              <hr>
+            </li>
+          </ul>
         </nav>
       </div>
     </div>
 
 
-    <div class="introduce-box">
-      <div class="introduce-text">
-        <h2 class="head-title">Welcome to <span>Celler de Can Roca</span></h2>
+    <div class="intro-box">
+      <div class="intro-text">
+        <h2 class="intro-text--head-title">Welcome to </h2>
+        <h1 class="restaurant-name-banner">Celler de Can Roca</h1>
         <p>Only serves lunch and dinner</p>
         <p> 10:30-14:00 and 17:30-20:00</p>
       </div>
       <div class="btn-box">
-        <a href="" class="btn">Learn more</a>
-        <a href="" class="btn ">Booking now</a>
+        <a href="#" class="btn">Learn more</a>
+        <a href="#" class="btn ">Booking now</a>
       </div>
     </div>
   </header>
@@ -51,31 +66,32 @@
   <main>
     <section class="section-1">
       <div class="about-us-box">
-        <div class="text-box">
-          <h1 class="title">About us</h1>
+        <div class="about-us-box__text-box">
+          <h1 class="text-box--title">About us</h1>
           <p>Voluptatem dignissimos provident quasi corporis voluptates sit assumenda.</p>
-
-          <p class="check-text"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-check2-circle"
-              viewBox="0 0 16 16">
-              <path
-                d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0" />
-              <path
-                d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
-            </svg> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <p class="check-text"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-check2-circle"
-              viewBox="0 0 16 16">
-              <path
-                d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0" />
-              <path
-                d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
-            </svg> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <p class="check-text"> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-check2-circle"
-              viewBox="0 0 16 16">
-              <path
-                d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0" />
-              <path
-                d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
-            </svg> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <div class="text-box__check-text">
+            <p> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-check2-circle"
+                viewBox="0 0 16 16">
+                <path
+                  d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0" />
+                <path
+                  d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
+              </svg> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-check2-circle"
+                viewBox="0 0 16 16">
+                <path
+                  d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0" />
+                <path
+                  d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
+              </svg> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <p> <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-check2-circle"
+                viewBox="0 0 16 16">
+                <path
+                  d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0" />
+                <path
+                  d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0l7-7z" />
+              </svg> Ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
 
           <p>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
             voluptate
@@ -83,7 +99,7 @@
             culpa qui officia deserunt mollit anim id est laborum</p>
         </div>
 
-        <img src="./images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="intro-img" alt="">
+        <img src="./images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="about-us-img" alt="">
 
 
       </div>
@@ -93,7 +109,7 @@
     <section class="section-2">
       <div class="container-box">
         <div class="why-choose-us">
-          <h1>Why Choose <span>Celler de Can Roca</span></h1>
+          <h1>Why Choose <span class="logo">Celler de Can Roca</span></h1>
           <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Deleniti optio blanditiis dolore earum ipsam
             libero quidem non eaque incidunt nulla. Est, quidem? Reiciendis, rerum quaerat? Ea autem necessitatibus enim
             quibusdam.
@@ -101,7 +117,7 @@
             voluptatum, eius ex tempora, amet aperiam totam ipsam nobis distinctio dolorem? Reprehenderit consequuntur
             iusto labore?
           </p>
-          <a href="" class="btn booking">Booking now</a>
+          <a href="" class="btn--booking">Booking now</a>
         </div>
 
         <div class="benefits-box">

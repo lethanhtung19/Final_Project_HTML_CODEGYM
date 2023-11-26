@@ -1,0 +1,141 @@
+/** @format */
+/**
+ * * SPACING SYSTEM (px)
+ * * 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+ * * 
+ * * FONT SIZE SYSTEM (px)
+ * * 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+ * *  *
+ * *
+ * * 
+ * */
+/** @format */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Playfair Display", serif;
+  font-size: 1.6rem;
+}
+
+.restaurant-name-banner, .logo-navbar__logo {
+  font-family: "Dancing Script", cursive;
+  font-style: italic;
+  color: #ffe066;
+  font-weight: 700;
+}
+
+.btn-box .btn {
+  text-decoration: none;
+  padding: 5px;
+  border: 2px solid #ffe066;
+  border-radius: 7px;
+  display: inline-block;
+}
+
+header {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/background-img/tomsriver-restaurants2.jpg);
+  background-size: 101%;
+  height: 100vh;
+  background-position: 0 -15.5rem;
+  padding: 2rem 5rem;
+}
+
+.logo-navbar {
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 0;
+  padding: 0 3rem;
+  margin-bottom: 12rem;
+}
+.logo-navbar ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 2.4rem;
+}
+.logo-navbar ul li {
+  list-style: none;
+}
+.logo-navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3px;
+  font-size: 2rem;
+}
+.logo-navbar ul li hr {
+  width: 0;
+  height: 2px;
+  background-color: #ffe066;
+  border: none;
+  opacity: 0;
+}
+.logo-navbar ul li:hover {
+  cursor: pointer;
+}
+.logo-navbar ul li:hover a {
+  color: #ffe066;
+  transition: all 0.5s ease-in-out;
+}
+.logo-navbar ul li:hover hr {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.logo-navbar__logo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 0;
+}
+
+.intro-box {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 0;
+  gap: 1.2rem;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.intro-box p {
+  color: #fff;
+}
+
+.intro-text--head-title {
+  color: #ffec99;
+  font-size: 6.2rem;
+}
+
+.restaurant-name-banner {
+  font-size: 7.2rem;
+}
+
+.btn-box {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 1.2rem;
+}
+.btn-box .btn {
+  color: #ffe066;
+}
+.btn-box .btn:hover {
+  background-color: #ffec99;
+}/*# sourceMappingURL=home_page.css.map */
