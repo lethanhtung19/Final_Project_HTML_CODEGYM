@@ -12,6 +12,20 @@
  * */
 @import "gennerals-attribute";
 
+.title {
+  margin-bottom: 6rem;
+
+  h1 {
+    color: $color-text;
+    font-size: $sub-title-font-size;
+
+    .logo {
+      @extend %lable-logo;
+      text-transform: none;
+    }
+  }
+}
+
 // HEADER
 
 header {
@@ -49,6 +63,7 @@ header {
         background-color: $color-impress;
         border: none;
         opacity: 0;
+        margin-top: 0;
       }
       &:hover {
         cursor: pointer;
@@ -69,7 +84,10 @@ header {
 .logo-navbar__logo {
   @extend%lable-logo;
   @include column-flexbox(0, 0);
-  // font-size: $sub-title-font-size;
+  .logo-navbar__name-restaurant {
+    font-weight: map-get($font-weight, bold);
+    margin-bottom: 0;
+  }
 }
 
 // BANNER PART
@@ -83,6 +101,7 @@ header {
 
   p {
     color: $color-text;
+    margin-bottom: 0;
   }
 }
 
@@ -98,10 +117,529 @@ header {
 .btn-box {
   @include align-center_flexrow(0, 1.2rem);
   .btn {
+    font-size: 1.6rem;
     @extend %button;
     color: $color-impress;
     &:hover {
       background-color: $color-sub-title;
+      color: black;
+    }
+  }
+}
+
+// ABOUTS
+
+.about {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/background-img/restaurant-photo.jpg);
+  background-position: 0 -30rem;
+  background-attachment: fixed;
+}
+
+.about-us-box {
+  @include align-center_flexrow(0, 0);
+  padding: 5rem;
+}
+.sub-title {
+  color: $color-impress;
+}
+.about-us-box__text-box {
+  @include column-flexbox(0, 3rem);
+  align-items: flex-start;
+  justify-content: space-between;
+  color: #fff;
+  .text-box__check-text {
+    margin-left: $indent-space;
+    p {
+      @include align-center_flexrow(0, 0);
+      .bi {
+        width: 2.4rem;
+        color: $color-impress;
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+.about-us-img {
+  width: 40%;
+  border: 2px solid $color-impress;
+}
+
+// WHY CHOOSE US
+
+.should-choose-us {
+  background-color: $background-color-section;
+  padding: 5rem;
+}
+
+.container-benefits-box {
+  @include align-center_flexrow(0, 3.5rem);
+  // max-width: 88.5rem;
+
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.benefits-box {
+  @include column-flexbox(2.5rem, 2rem);
+  background-color: #1a1814;
+  color: $color-text;
+  text-align: center;
+  max-width: 25rem;
+  transition: all 0.5s;
+
+  h2 {
+    color: $color-impress;
+  }
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.icons-box {
+  color: $color-impress;
+  background-color: #ffe0661a;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  @include align-center_flexrow(0, 0);
+  justify-content: center;
+  .bi {
+    width: 2.4rem;
+  }
+}
+
+// SPECIAL DISH
+
+.special-dishes {
+  background-color: #1a1814;
+  padding: 5rem;
+
+  .container {
+    h1 {
+      color: $color-text;
+      font-size: 3.4rem;
+      span {
+        color: $color-impress;
+        text-transform: uppercase;
+      }
+    }
+    .container-special-box {
+      @include align-center_flexrow(0, 0);
+      position: relative;
+      .title {
+        margin-bottom: 3rem;
+      }
+      .dishes-intro {
+        @include column-flexbox(0, 3rem);
+        position: absolute;
+        top: 10rem;
+        left: -5rem;
+        background-color: $background-color-section;
+        color: $color-text;
+        padding: 5rem 2rem;
+        align-items: flex-start;
+        border: 2px solid $color-impress;
+        // box-shadow: 0 0 10px $color-sub-title;
+        h2 {
+          font-size: 2.4rem;
+          font-weight: map-get($font-weight, light);
+          color: $color-sub-title;
+        }
+        .dish-detail {
+          @include align-center_flexrow(0, 10rem);
+
+          .dish-decrible {
+            h1 {
+              text-transform: uppercase;
+              font-size: 2rem;
+              color: $color-impress;
+            }
+            h3 {
+              font-size: 1.5rem;
+            }
+            .five-stars {
+              color: $color-impress;
+            }
+          }
+          .pricing {
+            font-size: 3rem;
+            color: $color-impress;
+          }
+        }
+
+        .btn--order {
+          @extend %button;
+          border-radius: 0;
+          color: $color-impress;
+        }
+      }
+
+      // @include align-center_flexrow(0, 0);
+      .empty {
+        width: 60%;
+      }
+      img {
+        width: 60rem;
+        justify-content: flex-end;
+      }
+    }
+  }
+}
+
+// MENU IN HOME PAGE
+
+.our-menu {
+  background-color: $background-color-section;
+  padding: 5rem;
+
+  .container {
+    margin: 0 auto;
+    .gridbox-container {
+      width: fit-content;
+      display: grid;
+      gap: 4rem;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: 1fr 1fr;
+
+      .lunch {
+        grid-column: 1;
+        grid-row: 1/-1;
+        box-shadow: 0 0 10px $color-impress;
+        border-radius: 7px;
+        background-image: url(/images/background-img/our-menu-01.jpg.webp);
+        width: 30rem;
+        height: 40rem;
+        background-size: 102%;
+        @include align-center_flexrow(0, 0);
+        justify-content: center;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          background-size: 110%;
+        }
+        .btn--menu {
+          // border-radius: 8px;
+          // padding: 5px;
+          a {
+            @extend %button;
+            background-color: #fff;
+            opacity: 0.9;
+            border: none;
+            color: black;
+            transition: all 0.5s;
+            &:hover {
+              background-color: $color-impress;
+            }
+          }
+        }
+      }
+
+      .dinner {
+        grid-column: 2/3;
+        grid-row: 1/-1;
+        box-shadow: 0 0 10px $color-impress;
+        border-radius: 7px;
+        background-image: url(/images/background-img/our-menu-05.jpg.webp);
+        width: 30rem;
+        height: 40rem;
+        background-size: 102%;
+        @include align-center_flexrow(0, 0);
+        justify-content: center;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          background-size: 110%;
+        }
+        .btn--menu {
+          // border-radius: 8px;
+          // padding: 5px;
+          a {
+            @extend %button;
+            background-color: #fff;
+            opacity: 0.9;
+            border: none;
+            color: black;
+            transition: all 0.5s;
+            &:hover {
+              background-color: $color-impress;
+            }
+          }
+        }
+      }
+
+      .drink {
+        grid-column: 3;
+        grid-row: 1;
+        box-shadow: 0 0 10px $color-impress;
+        border-radius: 7px;
+        background-image: url(/images/background-img/our-menu-08.jpg.webp);
+        width: 40rem;
+        height: 18rem;
+        background-size: 102%;
+        @include align-center_flexrow(0, 0);
+        justify-content: center;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          background-size: 110%;
+        }
+        .btn--menu {
+          // border-radius: 8px;
+          // padding: 5px;
+          a {
+            @extend %button;
+            background-color: #fff;
+            opacity: 0.9;
+            border: none;
+            color: black;
+            transition: all 0.5s;
+            &:hover {
+              background-color: $color-impress;
+            }
+          }
+        }
+      }
+
+      .starter {
+        grid-column: 3;
+        grid-row: 2;
+        box-shadow: 0 0 10px $color-impress;
+        border-radius: 7px;
+        background-image: url(/images/background-img/our-menu-10.jpg.webp);
+        width: 40rem;
+        height: 18rem;
+        background-size: 102%;
+        background-position: 0 -5rem;
+        @include align-center_flexrow(0, 0);
+        justify-content: center;
+        transition: all 0.5s ease-in-out;
+        &:hover {
+          background-size: 110%;
+        }
+        .btn--menu {
+          // border-radius: 8px;
+          // padding: 5px;
+          a {
+            @extend %button;
+            background-color: #fff;
+            opacity: 0.9;
+            border: none;
+            color: black;
+            transition: all 0.5s;
+            &:hover {
+              background-color: $color-impress;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// EVENTS
+
+.events-section {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(/images/background-img/syed-ahmad-kgjQ1AGDwE0-unsplash.jpg);
+  background-size: 100%;
+  padding: 5rem;
+  background-attachment: fixed;
+  // height: 100vh;
+
+  .container {
+    .events-box {
+      .carousel-item {
+        transition: all 1.5s;
+
+        .event {
+          @include align-center_flexrow(0, 4.5rem);
+          img {
+            width: 50%;
+          }
+
+          .event-text {
+            color: $color-text;
+            h2 {
+              text-transform: uppercase;
+              // font-size: 2rem;
+              color: $color-impress;
+            }
+            h3 {
+              color: $color-text;
+              font-size: 3rem;
+              font-weight: map-get($font-weight, regular);
+
+              hr {
+                margin-top: 3px !important;
+                height: 2px;
+                width: 6rem;
+                background-color: $color-impress;
+                opacity: 1;
+                border: none;
+              }
+            }
+            ul {
+              list-style: none;
+              padding-left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// TESTIMONIALS
+
+.testimonials-section {
+  background-color: #1a1814;
+  padding: 5rem;
+  .container {
+    // .carousel-inner {
+    //   width: 70%;
+    // }
+    .carousel-item {
+      // @include align-center_flexrow(0, 0);
+
+      transition: 1.5s;
+      .container-testimonials {
+        @include align-center_flexrow(0, 3rem);
+        margin: 0 auto;
+        width: fit-content;
+
+        .testimonial-box {
+          width: 30rem;
+          // margin: 0 auto;
+          color: $color-text;
+          .text {
+            text-align: center;
+            position: relative;
+            background-color: #26231d;
+            padding: 1.5rem;
+            padding-bottom: 3rem;
+            margin-bottom: 5.5rem;
+            border-radius: 7px;
+
+            blockquote {
+              .bi-quote {
+                color: $color-impress;
+                width: 2.4rem;
+                height: 2.4rem;
+                display: inline-block;
+              }
+              .bi-quote:nth-child(even) {
+                transform: rotateY(180deg);
+              }
+            }
+            img {
+              box-shadow: 0 0 1px 5px #ffffff99;
+              width: 6rem;
+              position: absolute;
+              left: 3rem;
+              bottom: -4.5rem;
+              border-radius: 50%;
+            }
+          }
+          h2 {
+            font-size: 1.6rem;
+            padding-left: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// FOOTER
+
+footer {
+  background-color: $background-color-section;
+  padding: 5rem;
+  padding-bottom: 3px;
+
+  .container {
+    margin-bottom: 3rem;
+    @include align-center_flexrow(0, 0);
+    justify-content: space-around;
+
+    .copyright {
+      @include column-flexbox(0, 1.5rem);
+      align-items: flex-start;
+
+      .logo__footer {
+        @include column-flexbox(0, 0);
+        align-items: center;
+        width: fit-content;
+        // align-items: center;
+        h1 {
+          @extend %lable-logo;
+          font-size: 3.4rem;
+        }
+
+        h2 {
+          text-transform: uppercase;
+          color: $color-sub-title;
+          font-size: 2.2rem;
+        }
+      }
+    }
+    .contact {
+      @include column-flexbox(0, 1.5rem);
+      align-items: flex-start;
+      .container-contact {
+        @include align-center_flexrow(0, 5px);
+        .impress-box {
+          background-color: $color-sub-title;
+          color: black;
+          padding: 5px;
+          font-size: 1.2rem;
+          width: 6rem;
+          font-weight: map-get($font-weight, bold);
+          text-align: center;
+        }
+        p {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    .newsletter {
+      h2 {
+        color: $color-sub-title;
+      }
+      form {
+        position: relative;
+        input {
+          height: 3rem;
+          border-radius: 1000px;
+          border: none;
+          padding: 5px;
+
+          width: 23rem;
+        }
+        button {
+          @include align-center_flexrow(0, 0);
+          padding: 7px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-radius: 1000px;
+          border: none;
+          background-color: $color-sub-title;
+          height: 3rem;
+        }
+      }
+    }
+  }
+  p {
+    margin-bottom: 0;
+    text-align: center;
+    color: $color-text;
+    font-size: 1.3rem;
+    a {
+      color: $color-impress;
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }
