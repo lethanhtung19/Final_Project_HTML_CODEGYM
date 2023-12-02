@@ -25,14 +25,14 @@ body {
   font-size: 1.6rem;
 }
 
-footer .container .copyright .logo__footer h1, .restaurant-name-banner, .logo-navbar__logo, .title h1 .logo, .title .sub-title {
+footer .container .copyright .logo__footer h1, .restaurant-name-banner, header .logo-navbar .logo-navbar__logo, .title h1 .logo, .title .sub-title {
   font-family: "Dancing Script", cursive;
   font-style: italic;
   color: #ffe066;
   font-weight: 700;
 }
 
-.our-menu .container .gridbox-container .starter .btn--menu a, .our-menu .container .gridbox-container .drink .btn--menu a, .our-menu .container .gridbox-container .dinner .btn--menu a, .our-menu .container .gridbox-container .lunch .btn--menu a, .special-dishes .container .container-special-box .dishes-intro .btn--order, .btn-box .btn {
+.our-menu .container .starter .btn--menu a, .our-menu .container .drink .btn--menu a, .our-menu .container .dinner .btn--menu a, .our-menu .container .lunch .btn--menu a, .special-dishes .container .container-special-box .dishes-intro .btn--order, .btn-box .btn {
   text-decoration: none;
   padding: 5px;
   border: 2px solid #ffe066;
@@ -61,6 +61,458 @@ footer .container .copyright .logo__footer h1, .restaurant-name-banner, .logo-na
   opacity: 1;
 }
 
+/** @format */
+@media (min-width: 700px) and (max-width: 1200px) {
+  html {
+    font-size: 52%;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/background-img/tomsriver-restaurants2.jpg);
+    height: 50vh;
+    background-position: 30% -2%;
+    background-size: cover;
+  }
+  header .container .logo-navbar {
+    display: none;
+  }
+  header .container .intro-box {
+    margin: 0 auto;
+  }
+  main .about {
+    padding: 2rem;
+  }
+  main .about .about-us-box {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 3rem;
+  }
+  main .about .about-us-box .about-us-box__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: #fff;
+  }
+  main .about .about-us-box .about-us-img {
+    width: 50%;
+    border: 2px solid #ffe066;
+  }
+  main .should-choose-us .container-benefits-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+    max-width: 70%;
+  }
+  main .should-choose-us .container-benefits-box .benefits-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    gap: 2rem;
+  }
+  main .special-dishes .container {
+    padding: 2rem;
+  }
+  main .special-dishes .container .container-special-box {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 0;
+  }
+  main .special-dishes .container .container-special-box .dishes-intro {
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 2rem;
+  }
+  main .special-dishes .container .container-special-box img {
+    width: 40%;
+    justify-content: flex-end;
+  }
+  main .our-menu {
+    padding: 2rem;
+  }
+  main .our-menu .container {
+    margin: 0 auto;
+  }
+  main .our-menu .container .gridbox-container {
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+  }
+  main .our-menu .container .gridbox-container .lunch {
+    grid-column: 1;
+    grid-row: 1;
+    width: 30rem;
+    height: 40rem;
+  }
+  main .our-menu .container .gridbox-container .dinner {
+    grid-column: 2;
+    grid-row: 1;
+    width: 30rem;
+    height: 40rem;
+  }
+  main .our-menu .container .gridbox-container .drink {
+    grid-column: 1/-1;
+    grid-row: 2;
+    width: 100%;
+    height: 18rem;
+    background-size: 85%;
+    background-position: 0 -3rem;
+  }
+  main .our-menu .container .gridbox-container .starter {
+    grid-column: 1/-1;
+    grid-row: 3;
+    width: 100%;
+    height: 18rem;
+    background-size: cover;
+    background-position: 0 -12rem;
+  }
+  main .events-section .container .events-box .carousel-item .event {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 4.5rem;
+  }
+  main .events-section .container .events-box .carousel-item .event img {
+    width: 50%;
+  }
+  main .testimonials-section .testimonial-box {
+    width: 20rem;
+  }
+  main footer .container {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 0;
+    justify-content: space-around;
+  }
+}
+@media (min-width: 1200px) {
+  header {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/background-img/tomsriver-restaurants2.jpg);
+    background-size: 103%;
+    height: 100vh;
+    background-position: 0 -15.5rem;
+    padding: 2rem 5rem;
+  }
+  header .logo-navbar {
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 0;
+    padding: 0 3rem;
+    margin-bottom: 12rem;
+  }
+  header .logo-navbar ul {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 2.4rem;
+  }
+  header .logo-navbar ul li {
+    list-style: none;
+  }
+  header .logo-navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 3px;
+    font-size: 2rem;
+  }
+  header .logo-navbar ul li hr {
+    width: 0;
+    height: 2px;
+    background-color: #ffe066;
+    border: none;
+    opacity: 0;
+    margin-top: 0;
+  }
+  header .logo-navbar ul li:hover {
+    cursor: pointer;
+  }
+  header .logo-navbar ul li:hover a {
+    color: #ffe066;
+    transition: all 0.5s ease-in-out;
+  }
+  header .logo-navbar ul li:hover hr {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    opacity: 1;
+  }
+  header .logo-navbar .container .intro-box .intro-text--head-title {
+    font-size: 6.2rem !important;
+  }
+  header .logo-navbar .container .intro-box h1 {
+    font-size: 7.2rem !important;
+  }
+  .about {
+    padding: 5rem;
+  }
+  .about .about-us-box {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 2rem;
+  }
+  .about .about-us-box .about-us-box__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 3rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: #fff;
+  }
+  .about .about-us-box .about-us-box__text-box .text-box__check-text {
+    margin-left: 2rem;
+  }
+  .about .about-us-img {
+    width: 40%;
+    border: 2px solid #ffe066;
+  }
+  .should-choose-us {
+    padding: 5rem;
+  }
+  .should-choose-us .container-benefits-box {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 3.5rem;
+    max-width: 88.5rem;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .should-choose-us .container-benefits-box .benefits-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+    gap: 2rem;
+    max-width: 25rem;
+    transition: all 0.5s;
+  }
+  .should-choose-us .container-benefits-box .benefits-box:hover {
+    transform: scale(1.1);
+  }
+  .special-dishes {
+    padding: 5rem;
+  }
+  .special-dishes .container-special-box {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 0;
+  }
+  .special-dishes .container-special-box .dishes-intro {
+    position: absolute;
+    top: 10rem;
+    left: -5rem;
+    padding: 5rem 2rem !important;
+    box-shadow: 0 0 10px #ffec99;
+  }
+  .special-dishes .container-special-box .empty {
+    width: 60%;
+  }
+  .special-dishes .container-special-box img {
+    width: 60rem;
+    justify-content: flex-end;
+  }
+  .our-menu {
+    padding: 5rem;
+  }
+  .our-menu .container .gridbox-container {
+    width: -moz-fit-content;
+    width: fit-content;
+    display: grid;
+    gap: 4rem;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 1fr 1fr;
+  }
+  .our-menu .container .gridbox-container .lunch {
+    grid-column: 1;
+    grid-row: 1/-1;
+    width: 30rem;
+    height: 40rem;
+  }
+  .our-menu .container .gridbox-container .dinner {
+    grid-column: 2/3;
+    grid-row: 1/-1;
+    width: 30rem;
+    height: 40rem;
+  }
+  .our-menu .container .gridbox-container .drink {
+    grid-column: 3;
+    grid-row: 1;
+    width: 40rem;
+  }
+  .our-menu .container .gridbox-container .starter {
+    grid-column: 3;
+    grid-row: 2;
+    width: 40rem;
+    background-size: 102%;
+    background-position: 0 -5rem;
+  }
+  .events-section {
+    padding: 5rem;
+  }
+  .events-section .container .events-box .carousel-item .event {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 4.5rem;
+  }
+  .events-section .container .events-box .carousel-item .event img {
+    width: 50%;
+  }
+  .testimonials-section {
+    padding: 5rem;
+  }
+  .testimonials-section .container .carousel-item .testimonial-box {
+    width: 30rem;
+  }
+  footer .container {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 0;
+    justify-content: space-around;
+  }
+}
+@media (max-width: 700px) {
+  section {
+    padding: 5px;
+  }
+  body {
+    font-size: 1rem;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    gap: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/background-img/tomsriver-restaurants2.jpg);
+    background-size: cover;
+    height: 35vh;
+  }
+  header .container .logo-navbar {
+    display: none;
+  }
+  header .container .intro-box {
+    margin: 0 auto;
+  }
+  header .container .intro-box .intro-text--head-title {
+    font-size: 2rem;
+  }
+  header .container .intro-box .restaurant-name-banner {
+    font-size: 2.6rem;
+  }
+  header .container .intro-box p {
+    font-size: 1rem;
+  }
+  .about {
+    padding: 2rem;
+  }
+  .about .about-us-box .about-us-box__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 1rem;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: #fff;
+  }
+  .about .about-us-box .about-us-img {
+    width: 100%;
+    border: 2px solid #ffe066;
+  }
+  .should-choose-us .container-benefits-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  .should-choose-us .container-benefits-box .benefits-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    gap: 2rem;
+  }
+  .special-dishes .container .container-special-box .dishes-intro {
+    margin-bottom: 2rem;
+  }
+  .special-dishes .container .container-special-box img {
+    width: 100%;
+  }
+  .our-menu .container .gridbox-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 1.5rem;
+  }
+  .our-menu .container .gridbox-container .lunch,
+  .our-menu .container .gridbox-container .dinner,
+  .our-menu .container .gridbox-container .drink,
+  .our-menu .container .gridbox-container .starter {
+    width: 30rem;
+    height: 20rem;
+    box-shadow: none;
+  }
+  .our-menu .container .gridbox-container .starter {
+    background-size: 110%;
+    background-position: 0 0rem;
+  }
+  .events-section .container .events-box .carousel-item .event {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 0;
+    align-items: center;
+    overflow: hidden;
+  }
+  .events-section .container .events-box .carousel-item .event img {
+    height: 30rem;
+  }
+  footer .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    gap: 1.5rem;
+  }
+  footer .container .newsletter .icons-box .bi {
+    stroke: #ffe066;
+  }
+}
 .title {
   margin-bottom: 6rem;
 }
@@ -72,15 +524,7 @@ footer .container .copyright .logo__footer h1, .restaurant-name-banner, .logo-na
   text-transform: none;
 }
 
-header {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/background-img/tomsriver-restaurants2.jpg);
-  background-size: 101%;
-  height: 100vh;
-  background-position: 0 -15.5rem;
-  padding: 2rem 5rem;
-}
-
-.logo-navbar {
+header .logo-navbar {
   justify-content: space-between;
   display: flex;
   align-items: center;
@@ -89,44 +533,7 @@ header {
   padding: 0 3rem;
   margin-bottom: 12rem;
 }
-.logo-navbar ul {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  gap: 2.4rem;
-}
-.logo-navbar ul li {
-  list-style: none;
-}
-.logo-navbar ul li a {
-  color: #fff;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 3px;
-  font-size: 2rem;
-}
-.logo-navbar ul li hr {
-  width: 0;
-  height: 2px;
-  background-color: #ffe066;
-  border: none;
-  opacity: 0;
-  margin-top: 0;
-}
-.logo-navbar ul li:hover {
-  cursor: pointer;
-}
-.logo-navbar ul li:hover a {
-  color: #ffe066;
-  transition: all 0.5s ease-in-out;
-}
-.logo-navbar ul li:hover hr {
-  width: 100%;
-  transition: all 0.5s ease-in-out;
-  opacity: 1;
-}
-
-.logo-navbar__logo {
+header .logo-navbar .logo-navbar__logo {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -134,9 +541,45 @@ header {
   padding: 0;
   gap: 0;
 }
-.logo-navbar__logo .logo-navbar__name-restaurant {
+header .logo-navbar .logo-navbar__logo .logo-navbar__name-restaurant {
   font-weight: 700;
   margin-bottom: 0;
+}
+header .logo-navbar .logo-navbar__logo ul {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 2.4rem;
+}
+header .logo-navbar .logo-navbar__logo ul li {
+  list-style: none;
+}
+header .logo-navbar .logo-navbar__logo ul li a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 3px;
+  font-size: 2rem;
+}
+header .logo-navbar .logo-navbar__logo ul li hr {
+  width: 0;
+  height: 2px;
+  background-color: #ffe066;
+  border: none;
+  opacity: 0;
+  margin-top: 0;
+}
+header .logo-navbar .logo-navbar__logo ul li:hover {
+  cursor: pointer;
+}
+header .logo-navbar .logo-navbar__logo ul li:hover a {
+  color: #ffe066;
+  transition: all 0.5s ease-in-out;
+}
+header .logo-navbar .logo-navbar__logo ul li:hover hr {
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  opacity: 1;
 }
 
 .intro-box {
@@ -185,86 +628,42 @@ header {
   background-position: 0 -30rem;
   background-attachment: fixed;
 }
-
-.about-us-box {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  gap: 0;
-  padding: 5rem;
-}
-
-.sub-title {
+.about .sub-title {
   color: #ffe066;
 }
-
-.about-us-box__text-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  gap: 3rem;
-  align-items: flex-start;
-  justify-content: space-between;
+.about .about-us-box__text-box {
   color: #fff;
 }
-.about-us-box__text-box .text-box__check-text {
-  margin-left: 2rem;
-}
-.about-us-box__text-box .text-box__check-text p {
+.about .about-us-box__text-box .text-box__check-text p {
   display: flex;
   align-items: center;
   padding: 0;
   gap: 0;
 }
-.about-us-box__text-box .text-box__check-text p .bi {
+.about .about-us-box__text-box .text-box__check-text p .bi {
   width: 2.4rem;
   color: #ffe066;
   margin-right: 5px;
 }
 
-.about-us-img {
-  width: 40%;
-  border: 2px solid #ffe066;
-}
-
 .should-choose-us {
   background-color: #0c0b09;
-  padding: 5rem;
 }
 
 .container-benefits-box {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  gap: 3.5rem;
-  width: -moz-fit-content;
-  width: fit-content;
   margin: 0 auto;
 }
 
 .benefits-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 2.5rem;
-  gap: 2rem;
   background-color: #1a1814;
   color: #fff;
   text-align: center;
-  max-width: 25rem;
-  transition: all 0.5s;
 }
 .benefits-box h2 {
   color: #ffe066;
 }
-.benefits-box:hover {
-  transform: scale(1.1);
-}
 
-.icons-box {
+.icons-whyus-box {
   color: #ffe066;
   background-color: rgba(255, 224, 102, 0.1019607843);
   width: 5rem;
@@ -276,13 +675,12 @@ header {
   gap: 0;
   justify-content: center;
 }
-.icons-box .bi {
+.icons-whyus-box .bi {
   width: 2.4rem;
 }
 
 .special-dishes {
   background-color: #1a1814;
-  padding: 5rem;
 }
 .special-dishes .container h1 {
   color: #fff;
@@ -292,13 +690,6 @@ header {
   color: #ffe066;
   text-transform: uppercase;
 }
-.special-dishes .container .container-special-box {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  gap: 0;
-  position: relative;
-}
 .special-dishes .container .container-special-box .title {
   margin-bottom: 3rem;
 }
@@ -307,14 +698,10 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0;
+  padding: 1rem;
   gap: 3rem;
-  position: absolute;
-  top: 10rem;
-  left: -5rem;
   background-color: #0c0b09;
   color: #fff;
-  padding: 5rem 2rem;
   align-items: flex-start;
   border: 2px solid #ffe066;
 }
@@ -348,37 +735,19 @@ header {
   border-radius: 0;
   color: #ffe066;
 }
-.special-dishes .container .container-special-box .empty {
-  width: 60%;
-}
-.special-dishes .container .container-special-box img {
-  width: 60rem;
-  justify-content: flex-end;
-}
 
 .our-menu {
   background-color: #0c0b09;
-  padding: 5rem;
 }
 .our-menu .container {
   margin: 0 auto;
-}
-.our-menu .container .gridbox-container {
   width: -moz-fit-content;
   width: fit-content;
-  display: grid;
-  gap: 4rem;
-  grid-template-columns: auto auto auto;
-  grid-template-rows: 1fr 1fr;
 }
-.our-menu .container .gridbox-container .lunch {
-  grid-column: 1;
-  grid-row: 1/-1;
+.our-menu .container .lunch {
   box-shadow: 0 0 10px #ffe066;
   border-radius: 7px;
   background-image: url(/images/background-img/our-menu-01.jpg.webp);
-  width: 30rem;
-  height: 40rem;
   background-size: 102%;
   display: flex;
   align-items: center;
@@ -387,27 +756,23 @@ header {
   justify-content: center;
   transition: all 0.5s ease-in-out;
 }
-.our-menu .container .gridbox-container .lunch:hover {
+.our-menu .container .lunch:hover {
   background-size: 110%;
 }
-.our-menu .container .gridbox-container .lunch .btn--menu a {
+.our-menu .container .lunch .btn--menu a {
   background-color: #fff;
   opacity: 0.9;
   border: none;
   color: black;
   transition: all 0.5s;
 }
-.our-menu .container .gridbox-container .lunch .btn--menu a:hover {
+.our-menu .container .lunch .btn--menu a:hover {
   background-color: #ffe066;
 }
-.our-menu .container .gridbox-container .dinner {
-  grid-column: 2/3;
-  grid-row: 1/-1;
+.our-menu .container .dinner {
   box-shadow: 0 0 10px #ffe066;
   border-radius: 7px;
   background-image: url(/images/background-img/our-menu-05.jpg.webp);
-  width: 30rem;
-  height: 40rem;
   background-size: 102%;
   display: flex;
   align-items: center;
@@ -416,27 +781,23 @@ header {
   justify-content: center;
   transition: all 0.5s ease-in-out;
 }
-.our-menu .container .gridbox-container .dinner:hover {
+.our-menu .container .dinner:hover {
   background-size: 110%;
 }
-.our-menu .container .gridbox-container .dinner .btn--menu a {
+.our-menu .container .dinner .btn--menu a {
   background-color: #fff;
   opacity: 0.9;
   border: none;
   color: black;
   transition: all 0.5s;
 }
-.our-menu .container .gridbox-container .dinner .btn--menu a:hover {
+.our-menu .container .dinner .btn--menu a:hover {
   background-color: #ffe066;
 }
-.our-menu .container .gridbox-container .drink {
-  grid-column: 3;
-  grid-row: 1;
+.our-menu .container .drink {
   box-shadow: 0 0 10px #ffe066;
   border-radius: 7px;
   background-image: url(/images/background-img/our-menu-08.jpg.webp);
-  width: 40rem;
-  height: 18rem;
   background-size: 102%;
   display: flex;
   align-items: center;
@@ -445,29 +806,23 @@ header {
   justify-content: center;
   transition: all 0.5s ease-in-out;
 }
-.our-menu .container .gridbox-container .drink:hover {
+.our-menu .container .drink:hover {
   background-size: 110%;
 }
-.our-menu .container .gridbox-container .drink .btn--menu a {
+.our-menu .container .drink .btn--menu a {
   background-color: #fff;
   opacity: 0.9;
   border: none;
   color: black;
   transition: all 0.5s;
 }
-.our-menu .container .gridbox-container .drink .btn--menu a:hover {
+.our-menu .container .drink .btn--menu a:hover {
   background-color: #ffe066;
 }
-.our-menu .container .gridbox-container .starter {
-  grid-column: 3;
-  grid-row: 2;
+.our-menu .container .starter {
   box-shadow: 0 0 10px #ffe066;
   border-radius: 7px;
   background-image: url(/images/background-img/our-menu-10.jpg.webp);
-  width: 40rem;
-  height: 18rem;
-  background-size: 102%;
-  background-position: 0 -5rem;
   display: flex;
   align-items: center;
   padding: 0;
@@ -475,51 +830,44 @@ header {
   justify-content: center;
   transition: all 0.5s ease-in-out;
 }
-.our-menu .container .gridbox-container .starter:hover {
+.our-menu .container .starter:hover {
   background-size: 110%;
 }
-.our-menu .container .gridbox-container .starter .btn--menu a {
+.our-menu .container .starter .btn--menu a {
   background-color: #fff;
   opacity: 0.9;
   border: none;
   color: black;
   transition: all 0.5s;
 }
-.our-menu .container .gridbox-container .starter .btn--menu a:hover {
+.our-menu .container .starter .btn--menu a:hover {
   background-color: #ffe066;
 }
 
 .events-section {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/images/background-img/syed-ahmad-kgjQ1AGDwE0-unsplash.jpg);
   background-size: 100%;
-  padding: 5rem;
   background-attachment: fixed;
+}
+.events-section .container {
+  margin: 0 auto;
 }
 .events-section .container .events-box .carousel-item {
   transition: all 1.5s;
 }
-.events-section .container .events-box .carousel-item .event {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  gap: 4.5rem;
-}
-.events-section .container .events-box .carousel-item .event img {
-  width: 50%;
-}
-.events-section .container .events-box .carousel-item .event .event-text {
+.events-section .container .events-box .carousel-item .event-text {
   color: #fff;
 }
-.events-section .container .events-box .carousel-item .event .event-text h2 {
+.events-section .container .events-box .carousel-item .event-text h2 {
   text-transform: uppercase;
   color: #ffe066;
 }
-.events-section .container .events-box .carousel-item .event .event-text h3 {
+.events-section .container .events-box .carousel-item .event-text h3 {
   color: #fff;
   font-size: 3rem;
   font-weight: 500;
 }
-.events-section .container .events-box .carousel-item .event .event-text h3 hr {
+.events-section .container .events-box .carousel-item .event-text h3 hr {
   margin-top: 3px !important;
   height: 2px;
   width: 6rem;
@@ -527,14 +875,13 @@ header {
   opacity: 1;
   border: none;
 }
-.events-section .container .events-box .carousel-item .event .event-text ul {
+.events-section .container .events-box .carousel-item .event-text ul {
   list-style: none;
   padding-left: 0;
 }
 
 .testimonials-section {
   background-color: #1a1814;
-  padding: 5rem;
 }
 .testimonials-section .container .carousel-item {
   transition: 1.5s;
@@ -549,7 +896,6 @@ header {
   width: fit-content;
 }
 .testimonials-section .container .carousel-item .container-testimonials .testimonial-box {
-  width: 30rem;
   color: #fff;
 }
 .testimonials-section .container .carousel-item .container-testimonials .testimonial-box .text {
@@ -590,11 +936,6 @@ footer {
 }
 footer .container {
   margin-bottom: 3rem;
-  display: flex;
-  align-items: center;
-  padding: 0;
-  gap: 0;
-  justify-content: space-around;
 }
 footer .container .copyright {
   display: flex;
@@ -651,6 +992,15 @@ footer .container .contact .container-contact .impress-box {
 footer .container .contact .container-contact p {
   font-size: 1.6rem;
 }
+footer .container .newsletter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 2rem;
+  align-items: center;
+}
 footer .container .newsletter h2 {
   color: #ffec99;
 }
@@ -661,8 +1011,13 @@ footer .container .newsletter form input {
   height: 3rem;
   border-radius: 1000px;
   border: none;
-  padding: 5px;
   width: 23rem;
+}
+footer .container .newsletter form input::-moz-placeholder {
+  padding-left: 5px;
+}
+footer .container .newsletter form input::placeholder {
+  padding-left: 5px;
 }
 footer .container .newsletter form button {
   display: flex;
@@ -677,6 +1032,20 @@ footer .container .newsletter form button {
   border: none;
   background-color: #ffec99;
   height: 3rem;
+}
+footer .container .newsletter .icons-box {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  gap: 3rem;
+}
+footer .container .newsletter .icons-box .bi {
+  cursor: pointer;
+  color: #26231d;
+  width: 2rem;
+}
+footer .container .newsletter .icons-box .bi:hover {
+  color: #ffe066;
 }
 footer p {
   margin-bottom: 0;

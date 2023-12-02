@@ -11,6 +11,7 @@
  * * 
  * */
 @import "gennerals-attribute";
+@import "responsive";
 
 .title {
   margin-bottom: 6rem;
@@ -29,64 +30,56 @@
 // HEADER
 
 header {
-  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-    url(/images/background-img/tomsriver-restaurants2.jpg);
-  background-size: 101%;
-  height: 100vh;
-  background-position: 0 -15.5rem;
-  padding: 2rem 5rem;
-}
+  // NAV-BAR ABSOLUTE
+  .logo-navbar {
+    justify-content: space-between;
+    @include align-center_flexrow(0, 0);
+    padding: 0 3rem;
+    margin-bottom: 12rem;
 
-// NAV-BAR ABSOLUTE
-.logo-navbar {
-  justify-content: space-between;
-  @include align-center_flexrow(0, 0);
-  padding: 0 3rem;
-  margin-bottom: 12rem;
-
-  ul {
-    @include align-center_flexrow(0, 2.4rem);
-
-    li {
-      list-style: none;
-
-      a {
-        color: $color-text;
-        text-decoration: none;
-        display: inline-block;
-        margin-bottom: 3px;
-        font-size: 2rem;
+    .logo-navbar__logo {
+      @extend%lable-logo;
+      @include column-flexbox(0, 0);
+      .logo-navbar__name-restaurant {
+        font-weight: map-get($font-weight, bold);
+        margin-bottom: 0;
       }
-      hr {
-        width: 0;
-        height: 2px;
-        background-color: $color-impress;
-        border: none;
-        opacity: 0;
-        margin-top: 0;
-      }
-      &:hover {
-        cursor: pointer;
-        a {
-          color: $color-impress;
-          transition: all 0.5s ease-in-out;
-        }
-        hr {
-          width: 100%;
-          transition: all 0.5s ease-in-out;
-          opacity: 1;
+      ul {
+        @include align-center_flexrow(0, 2.4rem);
+
+        li {
+          list-style: none;
+
+          a {
+            color: $color-text;
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 3px;
+            font-size: 2rem;
+          }
+          hr {
+            width: 0;
+            height: 2px;
+            background-color: $color-impress;
+            border: none;
+            opacity: 0;
+            margin-top: 0;
+          }
+          &:hover {
+            cursor: pointer;
+            a {
+              color: $color-impress;
+              transition: all 0.5s ease-in-out;
+            }
+            hr {
+              width: 100%;
+              transition: all 0.5s ease-in-out;
+              opacity: 1;
+            }
+          }
         }
       }
     }
-  }
-}
-
-.logo-navbar__logo {
-  @extend%lable-logo;
-  @include column-flexbox(0, 0);
-  .logo-navbar__name-restaurant {
-    font-weight: map-get($font-weight, bold);
-    margin-bottom: 0;
   }
 }
 
@@ -134,70 +127,59 @@ header {
     url(/images/background-img/restaurant-photo.jpg);
   background-position: 0 -30rem;
   background-attachment: fixed;
-}
 
-.about-us-box {
-  @include align-center_flexrow(0, 0);
-  padding: 5rem;
-}
-.sub-title {
-  color: $color-impress;
-}
-.about-us-box__text-box {
-  @include column-flexbox(0, 3rem);
-  align-items: flex-start;
-  justify-content: space-between;
-  color: #fff;
-  .text-box__check-text {
-    margin-left: $indent-space;
-    p {
-      @include align-center_flexrow(0, 0);
-      .bi {
-        width: 2.4rem;
-        color: $color-impress;
-        margin-right: 5px;
+  .about-us-box {
+  }
+  .sub-title {
+    color: $color-impress;
+  }
+  .about-us-box__text-box {
+    color: $color-text;
+    .text-box__check-text {
+      p {
+        @include align-center_flexrow(0, 0);
+        .bi {
+          width: 2.4rem;
+          color: $color-impress;
+          margin-right: 5px;
+        }
       }
     }
   }
-}
-
-.about-us-img {
-  width: 40%;
-  border: 2px solid $color-impress;
 }
 
 // WHY CHOOSE US
 
 .should-choose-us {
   background-color: $background-color-section;
-  padding: 5rem;
+  // padding: 5rem;
 }
 
 .container-benefits-box {
-  @include align-center_flexrow(0, 3.5rem);
+  // @include align-center_flexrow(0, 3.5rem);
   // max-width: 88.5rem;
 
-  width: fit-content;
+  // width: fit-content;
   margin: 0 auto;
 }
 
 .benefits-box {
-  @include column-flexbox(2.5rem, 2rem);
+  // @include column-flexbox(2.5rem, 2rem);
   background-color: #1a1814;
   color: $color-text;
   text-align: center;
-  max-width: 25rem;
-  transition: all 0.5s;
+  // max-width: 25rem;
+  // transition: all 0.5s;
 
   h2 {
     color: $color-impress;
   }
-  &:hover {
-    transform: scale(1.1);
-  }
+  // &:hover {
+  //   transform: scale(1.1);
+  // }
 }
 
-.icons-box {
+.icons-whyus-box {
   color: $color-impress;
   background-color: #ffe0661a;
   width: 5rem;
@@ -214,7 +196,7 @@ header {
 
 .special-dishes {
   background-color: #1a1814;
-  padding: 5rem;
+  // padding: 5rem;
 
   .container {
     h1 {
@@ -226,22 +208,18 @@ header {
       }
     }
     .container-special-box {
-      @include align-center_flexrow(0, 0);
-      position: relative;
       .title {
         margin-bottom: 3rem;
       }
       .dishes-intro {
-        @include column-flexbox(0, 3rem);
-        position: absolute;
-        top: 10rem;
-        left: -5rem;
+        @include column-flexbox(1rem, 3rem);
+
         background-color: $background-color-section;
         color: $color-text;
-        padding: 5rem 2rem;
+
         align-items: flex-start;
         border: 2px solid $color-impress;
-        // box-shadow: 0 0 10px $color-sub-title;
+
         h2 {
           font-size: 2.4rem;
           font-weight: map-get($font-weight, light);
@@ -249,7 +227,6 @@ header {
         }
         .dish-detail {
           @include align-center_flexrow(0, 10rem);
-
           .dish-decrible {
             h1 {
               text-transform: uppercase;
@@ -268,21 +245,11 @@ header {
             color: $color-impress;
           }
         }
-
         .btn--order {
           @extend %button;
           border-radius: 0;
           color: $color-impress;
         }
-      }
-
-      // @include align-center_flexrow(0, 0);
-      .empty {
-        width: 60%;
-      }
-      img {
-        width: 60rem;
-        justify-content: flex-end;
       }
     }
   }
@@ -292,142 +259,115 @@ header {
 
 .our-menu {
   background-color: $background-color-section;
-  padding: 5rem;
+  // padding: 5rem;
 
   .container {
     margin: 0 auto;
-    .gridbox-container {
-      width: fit-content;
-      display: grid;
-      gap: 4rem;
-      grid-template-columns: auto auto auto;
-      grid-template-rows: 1fr 1fr;
 
-      .lunch {
-        grid-column: 1;
-        grid-row: 1/-1;
-        box-shadow: 0 0 10px $color-impress;
-        border-radius: 7px;
-        background-image: url(/images/background-img/our-menu-01.jpg.webp);
-        width: 30rem;
-        height: 40rem;
-        background-size: 102%;
-        @include align-center_flexrow(0, 0);
-        justify-content: center;
-        transition: all 0.5s ease-in-out;
-        &:hover {
-          background-size: 110%;
-        }
-        .btn--menu {
-          // border-radius: 8px;
-          // padding: 5px;
-          a {
-            @extend %button;
-            background-color: #fff;
-            opacity: 0.9;
-            border: none;
-            color: black;
-            transition: all 0.5s;
-            &:hover {
-              background-color: $color-impress;
-            }
+    width: fit-content;
+
+    .lunch {
+      box-shadow: 0 0 10px $color-impress;
+      border-radius: 7px;
+      background-image: url(/images/background-img/our-menu-01.jpg.webp);
+
+      background-size: 102%;
+      @include align-center_flexrow(0, 0);
+      justify-content: center;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        background-size: 110%;
+      }
+      .btn--menu {
+        a {
+          @extend %button;
+          background-color: #fff;
+          opacity: 0.9;
+          border: none;
+          color: black;
+          transition: all 0.5s;
+          &:hover {
+            background-color: $color-impress;
           }
         }
       }
+    }
 
-      .dinner {
-        grid-column: 2/3;
-        grid-row: 1/-1;
-        box-shadow: 0 0 10px $color-impress;
-        border-radius: 7px;
-        background-image: url(/images/background-img/our-menu-05.jpg.webp);
-        width: 30rem;
-        height: 40rem;
-        background-size: 102%;
-        @include align-center_flexrow(0, 0);
-        justify-content: center;
-        transition: all 0.5s ease-in-out;
-        &:hover {
-          background-size: 110%;
-        }
-        .btn--menu {
-          // border-radius: 8px;
-          // padding: 5px;
-          a {
-            @extend %button;
-            background-color: #fff;
-            opacity: 0.9;
-            border: none;
-            color: black;
-            transition: all 0.5s;
-            &:hover {
-              background-color: $color-impress;
-            }
+    .dinner {
+      box-shadow: 0 0 10px $color-impress;
+      border-radius: 7px;
+      background-image: url(/images/background-img/our-menu-05.jpg.webp);
+
+      background-size: 102%;
+      @include align-center_flexrow(0, 0);
+      justify-content: center;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        background-size: 110%;
+      }
+      .btn--menu {
+        a {
+          @extend %button;
+          background-color: #fff;
+          opacity: 0.9;
+          border: none;
+          color: black;
+          transition: all 0.5s;
+          &:hover {
+            background-color: $color-impress;
           }
         }
       }
+    }
 
-      .drink {
-        grid-column: 3;
-        grid-row: 1;
-        box-shadow: 0 0 10px $color-impress;
-        border-radius: 7px;
-        background-image: url(/images/background-img/our-menu-08.jpg.webp);
-        width: 40rem;
-        height: 18rem;
-        background-size: 102%;
-        @include align-center_flexrow(0, 0);
-        justify-content: center;
-        transition: all 0.5s ease-in-out;
-        &:hover {
-          background-size: 110%;
-        }
-        .btn--menu {
-          // border-radius: 8px;
-          // padding: 5px;
-          a {
-            @extend %button;
-            background-color: #fff;
-            opacity: 0.9;
-            border: none;
-            color: black;
-            transition: all 0.5s;
-            &:hover {
-              background-color: $color-impress;
-            }
+    .drink {
+      box-shadow: 0 0 10px $color-impress;
+      border-radius: 7px;
+      background-image: url(/images/background-img/our-menu-08.jpg.webp);
+
+      background-size: 102%;
+      @include align-center_flexrow(0, 0);
+      justify-content: center;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        background-size: 110%;
+      }
+      .btn--menu {
+        a {
+          @extend %button;
+          background-color: #fff;
+          opacity: 0.9;
+          border: none;
+          color: black;
+          transition: all 0.5s;
+          &:hover {
+            background-color: $color-impress;
           }
         }
       }
+    }
 
-      .starter {
-        grid-column: 3;
-        grid-row: 2;
-        box-shadow: 0 0 10px $color-impress;
-        border-radius: 7px;
-        background-image: url(/images/background-img/our-menu-10.jpg.webp);
-        width: 40rem;
-        height: 18rem;
-        background-size: 102%;
-        background-position: 0 -5rem;
-        @include align-center_flexrow(0, 0);
-        justify-content: center;
-        transition: all 0.5s ease-in-out;
-        &:hover {
-          background-size: 110%;
-        }
-        .btn--menu {
-          // border-radius: 8px;
-          // padding: 5px;
-          a {
-            @extend %button;
-            background-color: #fff;
-            opacity: 0.9;
-            border: none;
-            color: black;
-            transition: all 0.5s;
-            &:hover {
-              background-color: $color-impress;
-            }
+    .starter {
+      box-shadow: 0 0 10px $color-impress;
+      border-radius: 7px;
+      background-image: url(/images/background-img/our-menu-10.jpg.webp);
+
+      @include align-center_flexrow(0, 0);
+      justify-content: center;
+      transition: all 0.5s ease-in-out;
+      &:hover {
+        background-size: 110%;
+      }
+      .btn--menu {
+        a {
+          @extend %button;
+          background-color: #fff;
+          opacity: 0.9;
+          border: none;
+          color: black;
+          transition: all 0.5s;
+          &:hover {
+            background-color: $color-impress;
           }
         }
       }
@@ -441,46 +381,39 @@ header {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(/images/background-img/syed-ahmad-kgjQ1AGDwE0-unsplash.jpg);
   background-size: 100%;
-  padding: 5rem;
+
   background-attachment: fixed;
-  // height: 100vh;
 
   .container {
+    margin: 0 auto;
     .events-box {
       .carousel-item {
         transition: all 1.5s;
 
-        .event {
-          @include align-center_flexrow(0, 4.5rem);
-          img {
-            width: 50%;
+        .event-text {
+          color: $color-text;
+          h2 {
+            text-transform: uppercase;
+
+            color: $color-impress;
           }
-
-          .event-text {
+          h3 {
             color: $color-text;
-            h2 {
-              text-transform: uppercase;
-              // font-size: 2rem;
-              color: $color-impress;
-            }
-            h3 {
-              color: $color-text;
-              font-size: 3rem;
-              font-weight: map-get($font-weight, regular);
+            font-size: 3rem;
+            font-weight: map-get($font-weight, regular);
 
-              hr {
-                margin-top: 3px !important;
-                height: 2px;
-                width: 6rem;
-                background-color: $color-impress;
-                opacity: 1;
-                border: none;
-              }
+            hr {
+              margin-top: 3px !important;
+              height: 2px;
+              width: 6rem;
+              background-color: $color-impress;
+              opacity: 1;
+              border: none;
             }
-            ul {
-              list-style: none;
-              padding-left: 0;
-            }
+          }
+          ul {
+            list-style: none;
+            padding-left: 0;
           }
         }
       }
@@ -492,14 +425,9 @@ header {
 
 .testimonials-section {
   background-color: #1a1814;
-  padding: 5rem;
-  .container {
-    // .carousel-inner {
-    //   width: 70%;
-    // }
-    .carousel-item {
-      // @include align-center_flexrow(0, 0);
 
+  .container {
+    .carousel-item {
       transition: 1.5s;
       .container-testimonials {
         @include align-center_flexrow(0, 3rem);
@@ -507,8 +435,6 @@ header {
         width: fit-content;
 
         .testimonial-box {
-          width: 30rem;
-          // margin: 0 auto;
           color: $color-text;
           .text {
             text-align: center;
@@ -558,8 +484,6 @@ footer {
 
   .container {
     margin-bottom: 3rem;
-    @include align-center_flexrow(0, 0);
-    justify-content: space-around;
 
     .copyright {
       @include column-flexbox(0, 1.5rem);
@@ -569,7 +493,7 @@ footer {
         @include column-flexbox(0, 0);
         align-items: center;
         width: fit-content;
-        // align-items: center;
+
         h1 {
           @extend %lable-logo;
           font-size: 3.4rem;
@@ -603,6 +527,9 @@ footer {
     }
 
     .newsletter {
+      @include column-flexbox(0, 2rem);
+      align-items: center;
+
       h2 {
         color: $color-sub-title;
       }
@@ -612,9 +539,11 @@ footer {
           height: 3rem;
           border-radius: 1000px;
           border: none;
-          padding: 5px;
-
+          // padding: 5px;
           width: 23rem;
+          &::placeholder {
+            padding-left: 5px;
+          }
         }
         button {
           @include align-center_flexrow(0, 0);
@@ -626,6 +555,18 @@ footer {
           border: none;
           background-color: $color-sub-title;
           height: 3rem;
+        }
+      }
+
+      .icons-box {
+        @include align-center_flexrow(0, 3rem);
+        .bi {
+          cursor: pointer;
+          color: #26231d;
+          width: 2rem;
+          &:hover {
+            color: $color-impress;
+          }
         }
       }
     }
