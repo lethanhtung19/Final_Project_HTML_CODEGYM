@@ -1,0 +1,104 @@
+/** @format */
+
+@media (min-width: 700px) and (max-width: 1200px) {
+  .section-1 {
+    .container {
+      background: url(/images/background-img/AMIfv961Qcp2UVAUNr-PUs1hqwJMO8f5TC_zob34Amdv-5BiH-Tuc-hWs9wCpjykkvOjnspn2riO7ied_GjR2G_ZTMGmSfK_AIMc974sWRg7RadSSjiPSscTg3ZXhk2IlEIEt6huKjBGlekXqOS_8caZ2AuMmSsQl2.png);
+      height: 32rem;
+      width: 100%;
+      background-size: 100%;
+      background-position: 10% 78%;
+      position: relative;
+      .booking-box {
+        position: absolute;
+        transform: translateX(-50%);
+        bottom: -80%;
+        left: 50%;
+      }
+    }
+  }
+  .section-2 {
+    .container {
+      padding-top: 30rem;
+      .infomation {
+        margin: 0 auto;
+        @include align-center_flexrow(0, 3rem);
+        justify-content: center;
+        .text {
+          padding: 3rem;
+          max-width: 50%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .section-1 {
+    background-color: $background-color-section;
+    .container {
+      .background {
+        background: url(/images/background-img/AMIfv961Qcp2UVAUNr-PUs1hqwJMO8f5TC_zob34Amdv-5BiH-Tuc-hWs9wCpjykkvOjnspn2riO7ied_GjR2G_ZTMGmSfK_AIMc974sWRg7RadSSjiPSscTg3ZXhk2IlEIEt6huKjBGlekXqOS_8caZ2AuMmSsQl2.png);
+        height: 25vh;
+        background-size: 100%;
+        background-position: 10% 78%;
+      }
+
+      .booking-box {
+        form {
+          // max-width: 36rem;
+          // max-width: 100%;
+          input {
+            display: inline-block;
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+
+  .section-2 {
+    .container {
+      .infomation {
+        @include column-flexbox(0, 1.5rem);
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .section-1 {
+    .container {
+      background: url(/images/background-img/AMIfv961Qcp2UVAUNr-PUs1hqwJMO8f5TC_zob34Amdv-5BiH-Tuc-hWs9wCpjykkvOjnspn2riO7ied_GjR2G_ZTMGmSfK_AIMc974sWRg7RadSSjiPSscTg3ZXhk2IlEIEt6huKjBGlekXqOS_8caZ2AuMmSsQl2.png);
+      height: 32rem;
+      width: 100%;
+      background-size: 100%;
+      background-position: 10% 78%;
+      .booking-box {
+        position: absolute;
+        bottom: -80%;
+        left: 40%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  .section-2 {
+    .container {
+      .empty {
+        flex: 1 80%;
+      }
+      @include align-center_flexrow(0, 0);
+      justify-content: space-between;
+      .infomation {
+        @include column-flexbox(0, 1.5rem);
+        width: 42rem;
+
+        iframe {
+          width: 40rem;
+          height: 30rem;
+        }
+      }
+    }
+  }
+}

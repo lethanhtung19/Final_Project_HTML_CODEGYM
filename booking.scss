@@ -1,0 +1,139 @@
+/** @format */
+@import "gennerals-attribute";
+@import "booking-responsive";
+@import "footer";
+
+header {
+  .logo-navbar {
+    justify-content: center;
+    background-color: rgba(256, 256, 256, 0.7);
+    @include align-center_flexrow(3rem, 0);
+    // position: fixed;
+    // width: 100%;
+    // top: 0;
+    // left: 0;
+    z-index: 10;
+    font-size: 5.2rem;
+    .logo-navbar__logo {
+      .logo-navbar__name-restaurant {
+        @extend%lable-logo;
+        text-decoration: none;
+        color: $color-impress;
+      }
+      text-align: center;
+    }
+  }
+}
+
+.section-1 {
+  .container {
+    position: relative;
+    .booking-box {
+      border-radius: 10px;
+      // transform: translateX(-50%);
+      background-color: #1a1814;
+      padding: 1rem;
+      form {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto auto auto;
+        border: 1px $color-impress;
+        gap: 1.5rem;
+        input,
+        input::placeholder,
+        textarea,
+        textarea::placeholder {
+          color: white;
+          padding: 5px;
+          font-family: "Playfair Display", serif;
+        }
+        .name {
+          grid-column: 1;
+          grid-row: 1;
+          background-color: #1a1814;
+          border: 1px solid $color-impress;
+        }
+
+        .mail {
+          grid-column: 2;
+          grid-row: 1;
+          background-color: #1a1814;
+          border: 1px solid $color-impress;
+        }
+        .phone {
+          grid-column: 3;
+          grid-row: 1;
+          background-color: #1a1814;
+          border: 1px solid $color-impress;
+        }
+
+        .date {
+          grid-column: 1;
+          grid-row: 2;
+          background-color: #1a1814;
+          border: 1px solid $color-impress;
+        }
+        .time {
+          grid-column: 2;
+          grid-row: 2;
+          background-color: #1a1814;
+          border: 1px solid $color-impress;
+        }
+        .table {
+          grid-column: 3;
+          grid-row: 2;
+          background-color: #1a1814;
+          border: 1px solid $color-impress;
+        }
+        .message {
+          grid-column: 1/-1;
+          grid-row: 3;
+          height: 15rem;
+          background-color: #1a1814;
+          border: 1px solid $color-impress;
+        }
+        .button-box {
+          grid-column: 2/3;
+          grid-row: 4;
+          @include column-flexbox(0, 0);
+          justify-content: center;
+          button {
+            padding: 10px;
+            border-radius: 1000px;
+            background-color: #1a1814;
+            border: 2px solid $color-impress;
+            color: $color-impress;
+            width: 12rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-2 {
+  background-color: $background-color-section;
+  padding: 5rem;
+  .container {
+    .infomation {
+      color: $color-text;
+      .text {
+        background-color: #1a1814;
+        border: 2px solid $color-impress;
+        text-align: center;
+        .logo-navbar__name-restaurant {
+          @extend %lable-logo;
+        }
+      }
+
+      iframe {
+        width: 100%;
+        height: 30rem;
+      }
+    }
+  }
+}
+footer {
+  background-color: #1a1814;
+}

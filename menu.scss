@@ -1,0 +1,133 @@
+/** @format */
+
+@import "gennerals-attribute";
+@import "footer";
+
+header {
+  @include column-flexbox(0, 0);
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(/images/background-img/bg-title-page-01.jpg.webp);
+  height: 60vh;
+  background-size: 100%;
+  // background-position: 0 -15rem;
+  background-attachment: fixed;
+  h1 {
+    a {
+      @extend %lable-logo;
+      font-size: 6.4rem;
+      text-decoration: none;
+      margin-right: 5px;
+    }
+    color: $color-text;
+    font-size: 5.4rem;
+    text-align: center;
+  }
+}
+main {
+  background-color: #1a1814;
+  .genneral-menu {
+    @include align-center_flexrow(0, 0);
+    padding: 5rem;
+    align-items: flex-start;
+    justify-content: space-around;
+    .container-1,
+    .container-2 {
+      @include column-flexbox(0, 3rem);
+    }
+
+    .menu {
+      h1 {
+        text-transform: uppercase;
+        color: $color-sub-title;
+        margin-bottom: 1rem;
+      }
+      .dish-box {
+        margin-bottom: 5px;
+        .text {
+          @include align-center_flexrow(0, 0);
+          align-items: flex-end;
+          margin-bottom: -2px;
+          h2 {
+            color: $color-impress;
+            font-size: 2rem;
+          }
+          p {
+            color: $color-text;
+            font-size: 1rem;
+          }
+          h3 {
+            color: $color-impress;
+          }
+        }
+        p {
+          color: $color-text;
+        }
+      }
+    }
+  }
+
+  .lunch,
+  .dinner {
+    padding-bottom: 5rem;
+    .img-banner-lunch,
+    .img-banner-dinner {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(/images/background-img/header-menu-01.jpg.webp);
+      height: 30rem;
+      background-size: cover;
+      background-position: 0 -15rem;
+      background-attachment: fixed;
+      @include column-flexbox(0, 0);
+      h1 {
+        letter-spacing: 1rem;
+        color: $color-text;
+        font-size: 5.4rem;
+        text-align: center;
+      }
+      margin-bottom: 5rem;
+    }
+
+    .img-banner-dinner {
+      background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(/images/background-img/header-menu-02.jpg.webp);
+      height: 30rem;
+      background-size: cover;
+      background-position: 0 -15rem;
+      background-attachment: fixed;
+      @include column-flexbox(0, 0);
+      h1 {
+        letter-spacing: 1rem;
+        color: $color-text;
+        font-size: 5.4rem;
+        text-align: center;
+      }
+      margin-bottom: 5rem;
+    }
+    .dishes-container {
+      @include align-center_flexrow(0, 0);
+      justify-content: space-around;
+      .left,
+      .right {
+        @include column-flexbox(0, 3rem);
+        .img-food {
+          @include align-center_flexrow(0, 1.5rem);
+          img {
+            width: 12rem;
+            border-radius: 7px;
+          }
+          .text {
+            h4 {
+              color: $color-impress;
+              font-size: 2rem;
+            }
+            p {
+              color: $color-text;
+              font-size: 1.4rem;
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

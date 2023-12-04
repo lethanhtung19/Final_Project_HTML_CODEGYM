@@ -1,0 +1,145 @@
+/** @format */
+@import "gennerals-attribute";
+
+// FOOTER
+
+footer {
+  background-color: $background-color-section;
+  padding: 5rem;
+  padding-bottom: 3px;
+
+  .container {
+    margin-bottom: 3rem;
+
+    .copyright {
+      @include column-flexbox(0, 1.5rem);
+      align-items: flex-start;
+
+      .logo__footer {
+        @include column-flexbox(0, 0);
+        align-items: center;
+        width: fit-content;
+
+        h1 {
+          @extend %lable-logo;
+          font-size: 3.4rem;
+        }
+
+        h2 {
+          text-transform: uppercase;
+          color: $color-sub-title;
+          font-size: 2.2rem;
+        }
+      }
+    }
+    .contact {
+      @include column-flexbox(0, 1.5rem);
+      align-items: flex-start;
+      .container-contact {
+        @include align-center_flexrow(0, 5px);
+        .impress-box {
+          background-color: $color-sub-title;
+          color: black;
+          padding: 5px;
+          font-size: 1.2rem;
+          width: 6rem;
+          font-weight: map-get($font-weight, bold);
+          text-align: center;
+        }
+        p {
+          font-size: 1.6rem;
+        }
+      }
+    }
+
+    .newsletter {
+      @include column-flexbox(0, 2rem);
+      align-items: center;
+
+      h2 {
+        color: $color-sub-title;
+      }
+      form {
+        position: relative;
+        input {
+          height: 3rem;
+          border-radius: 1000px;
+          border: none;
+          // padding: 5px;
+          width: 23rem;
+          &::placeholder {
+            padding-left: 5px;
+          }
+        }
+        button {
+          @include align-center_flexrow(0, 0);
+          padding: 7px;
+          position: absolute;
+          top: 0;
+          right: 0;
+          border-radius: 1000px;
+          border: none;
+          background-color: $color-sub-title;
+          height: 3rem;
+        }
+      }
+
+      .icons-box {
+        @include align-center_flexrow(0, 3rem);
+        .bi {
+          cursor: pointer;
+          color: #26231d;
+          width: 2rem;
+          &:hover {
+            color: $color-impress;
+          }
+        }
+      }
+    }
+  }
+  p {
+    margin-bottom: 0;
+    text-align: center;
+    color: $color-text;
+    font-size: 1.3rem;
+    a {
+      color: $color-impress;
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  footer {
+    .container {
+      @include column-flexbox(0, 1.5rem);
+      .newsletter {
+        .icons-box {
+          .bi {
+            stroke: $color-impress;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  footer {
+    .container {
+      @include align-center_flexrow(0, 0);
+      justify-content: space-around;
+    }
+  }
+}
+
+@media (min-width: 700px) and (max-width: 1200px) {
+  footer {
+    .container {
+      @include align-center_flexrow(0, 2rem);
+      justify-content: space-around;
+    }
+  }
+}

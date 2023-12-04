@@ -134,12 +134,12 @@ $padding-tablet: 2rem;
         width: 20rem;
       }
     }
-    footer {
-      .container {
-        @include align-center_flexrow(0, 0);
-        justify-content: space-around;
-      }
-    }
+    // footer {
+    //   .container {
+    //     @include align-center_flexrow(0, 0);
+    //     justify-content: space-around;
+    //   }
+    // }
   }
 }
 
@@ -322,12 +322,6 @@ $padding-tablet: 2rem;
           width: 30rem;
         }
       }
-    }
-  }
-  footer {
-    .container {
-      @include align-center_flexrow(0, 0);
-      justify-content: space-around;
     }
   }
 }
